@@ -73,7 +73,7 @@ def update_readme(
     new_content = before + marker_start + new_middle + marker_end + after
 
     if new_content != readme_file:
-        README_PATH.write_text(new_content, encoding="utf-8")
+        readme_file_path.write_text(new_content, encoding="utf-8")
         # print(readme_file)
         # print(new_content)
         print("README.md updated")
