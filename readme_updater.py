@@ -1,24 +1,19 @@
 import datetime
 from pathlib import Path
-
-README_PATH = Path("README.md")
-TOPICS_DIR = Path("topics")
-MARKER_START = "<!-- TIL_START -->"
-MARKER_END = "<!-- TIL_END -->"
-
+import sys
 
 def format_timestamp(timestamp):
     return datetime.datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
 
 
-def collect_notes() -> list[dict[str, str]]:
-    if not TOPICS_DIR.exists():
-        print(f"Warning: Directory '{TOPICS_DIR}' not found.")
+def collect_notes(topics_path: Path) -> list[dict[str, str]]:
+    if not topics_path.exists():
+        print(f"Warning: Directory '{topics_path}' not found.")
         return []
 
     topics_structure = []
 
-    for topic_dir in sorted(TOPICS_DIR.iterdir()):
+    for topic_dir in sorted(topics_path.iterdir()):
         if not topic_dir.is_dir():
             continue
 
@@ -54,34 +49,46 @@ def render_toc(topics):
     return "\n".join(lines)
 
 
-def update_readme():
-    readme_file_path = Path("README.md")
+def update_readme(
+        readme_file_path: Path,
+        topics_dir_path: Path,
+        marker_start: str,
+        marker_end: str
+):
     if not readme_file_path.exists():
-        raise FileExistsError(f'{README_PATH} not found.')
+        raise FileExistsError(f'{readme_file_path} not found.')
 
-    readme_file = README_PATH.read_text(encoding="utf-8")
+    readme_file = readme_file_path.read_text(encoding="utf-8")
 
-    if MARKER_START not in readme_file or MARKER_END not in readme_file:
+    if marker_start not in readme_file or marker_end not in readme_file:
         raise NameError('Markers not found in README.md. Aborting.')
 
-    before, *middle_and_after = readme_file.split(MARKER_START)
-    middle, after = MARKER_END.join(middle_and_after).split(MARKER_END, 1)
+    before, *middle_and_after = readme_file.split(marker_start)
+    middle, after = marker_end.join(middle_and_after).split(marker_end, 1)
 
-    topics_structure = collect_notes()
+    topics_structure = collect_notes(topics_dir_path)
     new_toc = render_toc(topics_structure)
     new_middle = f"\n{new_toc}\n"
 
-    new_content = before + MARKER_START + new_middle + MARKER_END + after
+    new_content = before + marker_start + new_middle + marker_end + after
 
-    if new_content != topics_structure:
+    if new_content != readme_file:
         README_PATH.write_text(new_content, encoding="utf-8")
+        # print(readme_file)
+        # print(new_content)
         print("README.md updated")
+        sys.exit(1)
     else:
-        print("No changes in TOC.")
+        print("No changes in README.md.")
+        sys.exit(0)
 
 
 if __name__ == "__main__":
-    update_readme()
+    README_PATH = Path("README.md")
+    TOPICS_DIR = Path("topics")
+    MARKER_START = "<!-- TIL_START -->"
+    MARKER_END = "<!-- TIL_END -->"
 
+    update_readme(README_PATH, TOPICS_DIR, MARKER_START, MARKER_END)
 
 # TODO: fix for pre-commit
