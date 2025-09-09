@@ -14,6 +14,6 @@
 <details>
 <summary>:smiley: Why?</summary>
 
-Better late than never! It's a pity I didn't start doing this earlier; I would have added many notes. So, it's like a diary to track my progress in programing, studying new things, ideas and to structure my life. It helps me. I borrowed the idea from [simonw/til](https://github.com/simonw/til), who was inspired by [jbranchaud/til](https://github.com/jbranchaud/til) - TIL an excellent note-taking format for developers.
+Better late than never! It's a pity I didn't start doing this earlier; I would have added many notes. So, it's like a diary to track my progress in programming, studying new things, ideas and to structure my life. It helps me. I borrowed the idea from [simonw/til](https://github.com/simonw/til), who was inspired by [jbranchaud/til](https://github.com/jbranchaud/til) - TIL an excellent note-taking format for developers.
 
 </details>
