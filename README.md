@@ -3,10 +3,13 @@
 <!-- TIL_START -->
 
 - [github](topics/github/)
-  - 2025-09-09: [til-as-my-blog](topics/github/til-as-my-blog.md)
+  - 2025-09-29: [til-as-my-blog](topics/github/til-as-my-blog.md)
 
 - [ideas](topics/ideas/)
   - 2025-09-10: [html-tags-for-llm](topics/ideas/html-tags-for-llm.md)
+
+- [python](topics/python/)
+  - 2025-09-27: [function-pipeline](topics/python/function-pipeline.md)
 
 <!-- TIL_END -->
 
