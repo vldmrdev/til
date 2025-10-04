@@ -2,6 +2,9 @@
 
 <!-- TIL_START -->
 
+- [cs](topics/cs/)
+  - 2025-10-05: [quick-decimal-to-binary](topics/cs/quick-decimal-to-binary.md)
+
 - [github](topics/github/)
   - 2025-09-29: [til-as-my-blog](topics/github/til-as-my-blog.md)
 
@@ -9,7 +12,8 @@
   - 2025-09-10: [html-tags-for-llm](topics/ideas/html-tags-for-llm.md)
 
 - [python](topics/python/)
-  - 2025-09-27: [function-pipeline](topics/python/function-pipeline.md)
+  - 2025-10-04: [bitwise-usecase-flags](topics/python/bitwise-usecase-flags.md)
+  - 2025-10-02: [function-pipeline](topics/python/function-pipeline.md)
 
 <!-- TIL_END -->
 
