@@ -4,7 +4,7 @@ basic knowledge of numeral systems. So, behold a quick way to convert numbers fr
 
 1. Firstly, you need to know the powers of 2, it's easy: 2**0=1, 2**1=2, 2**2=4, 8, 16, 32, 64, 128, etc.
 
-2. Next, you should know that the number of bits of your digit in the binary system is the highest power of 2 that does
+2. Next, you should know that the number of bits of your number in the binary system is the highest power of 2 that does
    not exceed the original number, plus 1 (because the number of bits starts from zero). For, example for 45 the largest
    power is 2**5(32) - this is 6 bits(from 0 to 5) in binary
 
