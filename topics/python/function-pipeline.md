@@ -33,3 +33,5 @@ def add_2(x):
 changed_num = Pipeline(5) | multiply_3 | add_2  # 5 * 3 + 2
 print(changed_num.value)  # 17
 ```
+
+```Important note: in this case | isn't bitwise OR, it's just OR as Union in the context of a set for types. ```
