@@ -216,3 +216,7 @@ __marimo__/
 # test files
 temp.py
 output-log.txt
+
+# TIL
+/drafts
+/draft
