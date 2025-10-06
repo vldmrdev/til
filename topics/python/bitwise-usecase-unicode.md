@@ -1,4 +1,4 @@
-### Bitwise operation in Python is interesting! 
+### Bitwise operations in Python are interesting! 
 As you know, all symbols can be converted to a numeric representation in Unicode, and thus, through the numeric representation, one symbol can be replaced with another.
 
 We will use:
