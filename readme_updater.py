@@ -1,9 +1,5 @@
-import datetime
 from pathlib import Path
 import sys
-
-def format_timestamp(timestamp):
-    return datetime.datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d")
 
 
 def collect_notes(topics_path: Path) -> list[dict[str, str]]:
@@ -29,7 +25,6 @@ def collect_notes(topics_path: Path) -> list[dict[str, str]]:
                     {
                         'md_file_name': file.stem,
                         'md_file_path': file.as_posix(),
-                        'md_file_timestamp': format_timestamp(file.stat().st_mtime)
                     }
                     for file in md_files
                 ]
@@ -44,7 +39,7 @@ def render_toc(topics):
     for topic in topics:
         lines.append(f"- [{topic['dir_name']}]({topic['dir_path']}/)")
         for note in topic["notes"]:
-            lines.append(f"  - {note['md_file_timestamp']}: [{note['md_file_name']}]({note['md_file_path']})")
+            lines.append(f"  - [{note['md_file_name']}]({note['md_file_path']})")
         lines.append("")
     return "\n".join(lines)
 
