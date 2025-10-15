@@ -1,4 +1,6 @@
 _I find it strange that gists are separated from the main github profile, so I'll add the script here._
+
+
 "It is a good manner to pin GitHub Actions versions by commit hash. GitHub tags are mutable so they have a substantial security and reliability risk."
 
 Inspired by https://github.com/suzuki-shunsuke/pinact :joy:
