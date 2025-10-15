@@ -6,6 +6,7 @@
   - [quick-decimal-to-binary](topics/cs/quick-decimal-to-binary.md)
 
 - [github](topics/github/)
+  - [github-action-hash](topics/github/github-action-hash.md)
   - [til-as-my-blog](topics/github/til-as-my-blog.md)
 
 - [ideas](topics/ideas/)
