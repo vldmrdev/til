@@ -15,6 +15,7 @@
 - [python](topics/python/)
   - [bitwise-usecase-unicode](topics/python/bitwise-usecase-unicode.md)
   - [function-pipeline](topics/python/function-pipeline.md)
+  - [python-class-resolution-name-order](topics/python/python-class-resolution-name-order.md)
 
 <!-- TIL_END -->
 
