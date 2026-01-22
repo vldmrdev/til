@@ -32,7 +32,7 @@ x = 0
 y = 0
 
 
-def strange_inner():
+def strange_func():
     x = 1
     y = 1
 
@@ -41,13 +41,13 @@ def strange_inner():
         x = 2
 
 
-strange_inner()
+strange_func()
 ```
 
-So, `strange_inner()` return `0 1` because:
+So, `strange_func()` return `0 1` because:
 
 1. Global scope: **x** = 0 and **y** = 0 are defined at the module level.
-2. Inside strange_inner(): new local variables **x** = 1 and **y** = 1 are created. These shadow the global ones within
+2. Inside strange_func(): new local variables **x** = 1 and **y** = 1 are created. These shadow the global ones within
    the function.
 3. During compilation of the class A body, Python scans all assignments:
     * Because **x** = 2 appears anywhere in the class body, the name **x** is marked as local to the class.
@@ -58,10 +58,10 @@ So, `strange_inner()` return `0 1` because:
     * At this point, **x** has not yet been assigned, so it is not present.
     * However, because **x** was statically marked as class-local, the enclosing function (strange_inner()) is skipped
       entirely.
-    * The search continues directly in the global scope, where x = 0 is found.
+    * The search continues directly in the global scope, where **x** = 0 is found.
     * #### For y:
     * Since **y** is not assigned in the class, it is treated as a free variable.
-    * Python follows the normal LEGB rule: not in class locals → checks enclosing scopes → finds y = 1 in
-      strange_inner().
+    * Python follows the normal LEGB rule: not in class locals → checks enclosing scopes → finds **y** = 1 in
+      strange_func().
 
 5. Result: print(x, y) outputs 0 1.
