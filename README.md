@@ -11,10 +11,12 @@
 
 - [ideas](topics/ideas/)
   - [html-tags-for-llm](topics/ideas/html-tags-for-llm.md)
+  - [make-github-gists-great.again](topics/ideas/make-github-gists-great.again.md)
 
 - [python](topics/python/)
   - [bitwise-usecase-unicode](topics/python/bitwise-usecase-unicode.md)
   - [function-pipeline](topics/python/function-pipeline.md)
+  - [get-ast-len-of-function](topics/python/get-ast-len-of-function.md)
   - [multiton-pattern-in-python](topics/python/multiton-pattern-in-python.md)
   - [python-class-resolution-name-order](topics/python/python-class-resolution-name-order.md)
 
