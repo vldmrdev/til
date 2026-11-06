@@ -87,3 +87,4 @@ if __name__ == "__main__":
     update_readme(README_PATH, TOPICS_DIR, MARKER_START, MARKER_END)
 
 # TODO: fix for pre-commit
+# TODO: add change log update func for showing notes order by date
