@@ -12,7 +12,7 @@
 - [ideas](topics/ideas/)
   - [html-tags-for-llm](topics/ideas/html-tags-for-llm.md)
   - [human-first-issue](topics/ideas/human-first-issue.md)
-  - [make-github-gists-great.again](topics/ideas/make-github-gists-great.again.md)
+  - [make-github-gists-great-again](topics/ideas/make-github-gists-great-again.md)
 
 - [python](topics/python/)
   - [bitwise-usecase-unicode](topics/python/bitwise-usecase-unicode.md)
