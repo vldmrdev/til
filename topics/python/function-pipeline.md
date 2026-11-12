@@ -1,5 +1,7 @@
 from traceback import print_tb
-The ```__or__``` method was added to support the X | Y syntax, as a replacement for typing. Union, and is also used to indicate that a variable or function can accept multiple different value types.
+The ```__or__``` method was added to support the X | Y syntax, as a replacement for typing. Union, and is also used to
+indicate that a variable or function can accept multiple different value types.
+
 ```python
 import typing
 
@@ -9,6 +11,7 @@ int | str == typing.Union[int, str]  # True
 ```
 
 In this example, we create a Pipe class with an overloaded ```__or__``` method.
+
 ```python
 class Pipeline:
 
@@ -35,3 +38,27 @@ print(changed_num.value)  # 17
 ```
 
 ```Important note: in this case | isn't bitwise OR, it's just OR as Union in the context of a set for types. ```
+
+UPD:
+
+or you can use [pipe](https://github.com/JulienPalard/Pipe), although pipe use for iterable objects you can use it in
+the same way:
+
+```python
+from pipe import Pipe
+
+
+@Pipe
+def multiply_3(value):
+    return value * 3
+
+
+@Pipe
+def add_2(value):
+    return value + 2
+
+
+result = 5 | multiply_3 | add_2
+
+print(result)  # 17
+```
