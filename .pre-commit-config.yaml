@@ -1,0 +1,22 @@
+repos:
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.52.2
+    hooks:
+      - id: typos
+        types: [markdown]
+
+  - repo: local
+    hooks:
+      - id: update-til-readme
+        name: Update TIL README
+        entry: python3 readme_updater.py
+        language: system
+        always_run: true
+        pass_filenames: false
